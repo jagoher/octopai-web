@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>OCTOPAI | Structuring Chaos</title>
+    <meta name="description" content="OCTOPAI — Structuring Chaos">
 
     <style>
         * {
@@ -13,42 +14,81 @@
             padding: 0;
         }
 
+        html,
+        body {
+            min-height: 100%;
+        }
+
         body {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #050510;
+            background:
+                radial-gradient(
+                    circle at 50% 40%,
+                    rgba(86, 46, 255, 0.12),
+                    transparent 36%
+                ),
+                radial-gradient(
+                    circle at 52% 45%,
+                    rgba(0, 132, 255, 0.08),
+                    transparent 30%
+                ),
+                #050510;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            overflow-x: hidden;
         }
 
         main {
-            width: 90%;
-            max-width: 800px;
+            width: min(92vw, 760px);
+            padding: 30px 20px 100px;
         }
 
         .logo {
-            width: 100%;
-            max-width: 650px;
+            display: block;
+            width: min(100%, 620px);
             height: auto;
+            margin: 0 auto;
+            background: transparent;
+            filter: drop-shadow(
+                0 0 24px rgba(86, 46, 255, 0.14)
+            );
         }
 
         .message {
-            margin-top: 35px;
-            color: #b8b8c7;
-            font-size: 18px;
-            letter-spacing: 2px;
+            margin-top: 30px;
+            color: #c9c9d7;
+            font-size: clamp(13px, 1.5vw, 16px);
+            font-weight: 500;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
         }
 
         footer {
             position: fixed;
             bottom: 20px;
-            width: 100%;
-            color: #6f6f80;
-            font-size: 14px;
+            left: 0;
+            right: 0;
+            color: #727286;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding-bottom: 80px;
+            }
+
+            .logo {
+                width: min(100%, 460px);
+            }
+
+            .message {
+                margin-top: 24px;
+                letter-spacing: 0.13em;
+            }
         }
     </style>
 </head>
@@ -58,11 +98,13 @@
     <main>
         <img
             src="octopai-logo.png"
-            alt="OCTOPAI - Structuring Chaos"
+            alt="OCTOPAI — Structuring Chaos"
             class="logo"
         >
 
-        <p class="message">Website under construction</p>
+        <p class="message">
+            Website under construction
+        </p>
     </main>
 
     <footer>
